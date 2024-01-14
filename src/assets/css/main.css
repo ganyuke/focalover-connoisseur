@@ -1,0 +1,41 @@
+@import './base.css';
+
+@layer base {
+  html {
+    font-family: Lato;
+    @apply bg-brand-dark
+  }
+  
+  .card {
+    @apply bg-brand-card
+  }
+  
+  @font-face {
+    font-family: Lato;
+    font-weight: 300;
+    font-style: italic;
+    src: url('../fonts/Lato-LightItalic.ttf');
+  }
+  @font-face {
+    font-family: Lato;
+    font-style: normal;
+    src: url('../fonts/Lato-Regular.ttf');
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 900;
+    font-style: normal;
+    src: url('../fonts/Lato-Black.ttf');
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Lato-Light.ttf');
+  }
+}
+
+
+p {
+  @apply text-white;
+}
