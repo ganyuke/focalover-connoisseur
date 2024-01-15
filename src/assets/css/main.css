@@ -3,13 +3,13 @@
 @layer base {
   html {
     font-family: Lato;
-    @apply bg-brand-dark
+    @apply bg-brand-dark;
   }
-  
+
   .card {
-    @apply bg-brand-card
+    @apply bg-brand-card;
   }
-  
+
   @font-face {
     font-family: Lato;
     font-weight: 300;

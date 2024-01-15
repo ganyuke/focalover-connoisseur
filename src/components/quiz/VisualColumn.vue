@@ -2,7 +2,8 @@
 const props = defineProps({
   coverArtUrl: { type: String, required: true },
   playbackTime: { type: Number, required: true },
-  duration: { type: Number, required: true }
+  duration: { type: Number, required: true },
+  showInfo: { type: Boolean, required: true }
 })
 
 const asTimestamp = (time: number) => {
@@ -16,12 +17,13 @@ const asTimestamp = (time: number) => {
 }
 </script>
 
-<script lang="ts"></script>
-
 <template>
   <div>
     <div class="from-[#7dcefc] to-[#8dbc85] bg-gradient-to-b rounded-lg p-4">
-      <img v-bind:src="props.coverArtUrl" class="w-full" />
+      <img v-if="showInfo" v-bind:src="props.coverArtUrl" class="w-full" />
+      <div v-if="!showInfo" class="w-full aspect-square flex">
+        <p class="text-8xl my-auto mx-auto">?</p>
+      </div>
     </div>
     <div class="bg-brand-card rounded-lg mt-4 p-4 relative">
       <label for="waveform" class="text-gray-400 absolute bottom-2"
